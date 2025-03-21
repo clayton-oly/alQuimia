@@ -367,46 +367,122 @@ header {
 /* #endregion */
 
 
-
-
-
-
-
-
 /*#region  fale conosco*/
 
 #faleConosco {
   background-image: url('../img/bannner_faleConosco.png');
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rebeccapurple;
-}
+  justify-content: center;
 
-.form {
-  background-color: yellow;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  background: #6c0086;
-}
+  h2 {
+    font-size: 50px;
+    color: var(--clr-subtitle);
+  }
 
-.right{
-  background: red;
+  span {
+    font-size: 20px;
+    color: var(--clr-white);
+  }
+
+  .containerFaleConosco {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-items: center;
+      align-items: center;
+
+      a {
+        border-radius: 30px;
+        border: 1px solid var(--clr-circle2);
+        font-size: 30px;
+      }
+
+      input {
+        font-size: 30px;
+        border-radius: 18px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-top: 5px;
+        color: var(--clr-accent);
+        width: 400px;
+      }
+
+      textarea {
+        width: 400px;
+        height: 150px;
+        font-size: 30px;
+        border-radius: 18px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-top: 5px;
+        color: var(--clr-accent);
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      h6 {
+        font-size: 30px;
+        color: #6c0086;
+        text-align: left;
+      }
+
+      .telefones {
+        display: flex;
+        gap: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: left;
+      }
+
+      iframe {
+        border-radius: 10px;
+        width: 450px;
+        height: 250px;
+      }
+    }
+  }
 }
 
 footer {
-  height: 10vh;
+  height: 15vh;
   background-color: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
+  align-items: center;
 
-iframe{
-  border-radius: 10px;
-}
+  .footerContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+  }
 
+  .line {
+    display: flex !important;
+    border-top: 1px solid var(--clr-subtitle);
+    width: 400px;
+  }
+
+  .footerLogo {
+    li {
+      a {
+        i {}
+      }
+    }
+  }
+}
 
 /*#endregion*/
 
