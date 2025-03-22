@@ -48,6 +48,15 @@ body {
 
 /* Pallet colors - Site*/
 :root {
+  --clr-rosa: #CF2DF4;
+  --clr-roxo: #8216DD;
+  --clr-branco: #ffffff;
+  --clr-black: #000000;
+  --clr-transparente: #00000000;
+  --clr-roxo-escuro: #17002b;
+  --clr-roxo-transparente: #8216DD25;
+  --clr-rosa-transparente: #CF2DF430;
+
   --clr-base: #333333;
   --clr-black: #000000;
   --clr-title: #6c0086;
