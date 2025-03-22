@@ -1,23 +1,35 @@
 function menuOnClick() {
-    document.getElementById("menuBar").classList.toggle("change");
-    document.getElementById("nav").classList.toggle("change");
-    document.getElementById("menuBg").classList.toggle("changeBg");
-  }
+  document.getElementById("menuBar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menuBg").classList.toggle("changeBg");
+}
 
 
-// // Seleciona os elementos necessários
-// const hamburger = document.querySelector('.hamburger');
-// const navBar = document.querySelector('.navBar');
-// const navLinks = document.querySelectorAll('.navBar li a');
 
-// // Alterna o menu ao clicar no botão hambúrguer
-// hamburger.addEventListener('click', () => {
-//     navBar.classList.toggle('active');
-// });
+const cards = document.querySelectorAll('.card');
+let currentIndex = 0;
 
-// // Fecha o menu ao clicar em qualquer link dentro dele
-// navLinks.forEach(link => {
-//     link.addEventListener('click', () => {
-//         navBar.classList.remove('active');
-//     });
-// });
+function updateCards() {
+    cards.forEach((card, index) => {
+        card.classList.remove('active', 'left', 'right', 'prev-left', 'next-right');
+        if (index === currentIndex) {
+            card.classList.add('active');
+        } else if (index === (currentIndex + 1) % cards.length) {
+            card.classList.add('right');
+        } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+            card.classList.add('left');
+        } else if (index === (currentIndex + 2) % cards.length) {
+            card.classList.add('next-right');
+        } else if (index === (currentIndex - 2 + cards.length) % cards.length) {
+            card.classList.add('prev-left');
+        }
+    });
+}
+
+function rotateCards() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateCards();
+}
+
+updateCards();
+setInterval(rotateCards, 4000);

@@ -19,6 +19,11 @@ body {
     overflow-x: hidden;
 }
 
+@font-face {
+    font-family: 'text';
+    src: url(../font/comfortaaBoldTitle.ttf);
+}
+
 /* basic reset */
 * {
     margin: 0;
@@ -28,6 +33,7 @@ body {
     list-style: none;
     text-decoration: none;
     color: var(--clr-black);
+    font-family: 'text';
 }
 
 
@@ -45,8 +51,6 @@ body {
     --clr-shadow: #b1b1b170;
     --clr-gradient1: linear-gradient(45deg, #6c0086 10%, #FF13F0 90%);
     --clr-gradient2: linear-gradient(45deg, #FF13F0 10%, #6c0086 90%);
-    /* --gradient-color1: radial-gradient(#110286 5%, #ffffff 95%);
-    --gradient-color2: radial-gradient(#0a0058 5%, #030016 55%); */
     --no-color: transparent;
 }
 
@@ -92,7 +96,7 @@ i {
 /* #endregion */
 
 
-/* #region media */
+/* #region media nav - banner*/
 
 
 @media (max-width: 768px) {
@@ -100,66 +104,20 @@ i {
         display: none;
     }
 
-    .menuContainer {
-        & .logo {
-            & img {
-                /* display: inline; */
-                z-index: 1;
-                width: 150px;
-            }
-        }
+    img.logo {
+        width: auto;
     }
 
-    /* .navBar {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: end;
-        justify-content: center;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        height: 50vh;
-        background: rgba(0, 0, 0, 0.7);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-        & li {
-            a {
-                color: var(--clr-gradient1);
-            }
-        }
-    } */
-
-    /* Mostrar o menu quando ativo */
-    /* .navBar.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .navBar li {
-        margin: 10px 0;
-    }
-
-    /* Estilizar botão hambúrguer */
-    /* .hamburger {
-        display: block;
-        font-size: 28px;
-        cursor: pointer;
-        color: white;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        z-index: 10;
-    }  */
     .banner {
         padding: 30px;
     }
+
     h1 {
         transition: all 0.3s;
         font-size: var(--txt-title1);
     }
+
     p {
         transition: all 0.3s;
         font-size: var(--txt-paragraph1);
@@ -174,36 +132,74 @@ i {
         display: none;
     }
 
-    .menuContainer {
-        .logo {
-            & img {
-                z-index: 1;
-                width: 200px;
-            }
-        }
-    }
-
-    /* .hamburger {
-        display: none;
-    }
-
-    .navBar {
-        display: flex !important;
-        height: auto;
-        position: relative;
-        background: none;
-        opacity: 1;
-        visibility: visible;
-    } */
     .banner {
         padding: 20px;
     }
+
 }
+
+
+
 
 /* #endregion */
 
 
 
+/*#region portifólio */
+
+@media (max-width: 768px) {
+    .carousel {
+      height: 220px;
+    }
+  
+    .card {
+      width: 200px;
+      height: 360px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .carousel {
+      height: 200px;
+    }
+  
+    .card {
+      width: 200px;
+      height: 270px;
+    }
+  
+    .card p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .carousel {
+      height: 120px;
+    }
+  
+    .card {
+      width: 150px;
+      height: 230px;
+    }
+  
+    .card p {
+      font-size: 10px;
+    }
+  }
+
+
+
+
+/*#endregion*/
+
+
+
+
+
+
+
+/*#region Fale Conosco*/
 @media (max-width: 1080px) {
     #faleConosco {
         height: auto;
@@ -294,17 +290,17 @@ i {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 468px) {
     #faleConosco {
         height: auto;
         padding: 15px;
 
         .contatoTitle {
-            h2 {
+            h1 {
                 font-size: 22px;
             }
 
-            span {
+            p {
                 font-size: 16px;
             }
         }
@@ -317,7 +313,8 @@ i {
         }
 
         .formWrapper {
-            max-width: 100%;
+            max-width: 70% !important;
+
 
             input,
             textarea {
@@ -360,6 +357,12 @@ i {
         text-align: center;
     }
 }
+
+/*#endregion*/
+
+
+
+
 
 
 /*endCss*/
