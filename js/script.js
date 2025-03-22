@@ -1,10 +1,7 @@
 function menuOnClick() {
     document.getElementById("menuBar").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change");
-    document.getElementById("menuBg").classList.toggle("changeBg");
 }
-
-
 
 const cards = document.querySelectorAll('.card');
 let currentIndex = 0;
