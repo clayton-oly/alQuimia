@@ -1,59 +1,5 @@
 /* #region Global  */
 
-/* scrollbar */
-body::-webkit-scrollbar {
-    width: 7px;
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--clr-black);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--clr-gradient1);
-    border-radius: 5px;
-    border: 2px solid var(--clr-gradient2);
-}
-
-body {
-    overflow-x: hidden;
-}
-
-@font-face {
-    font-family: 'text';
-    src: url(../font/comfortaaBoldTitle.ttf);
-}
-
-/* basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: '';
-    list-style: none;
-    text-decoration: none;
-    color: var(--clr-black);
-    font-family: 'text';
-}
-
-
-
-/* Pallet colors */
-:root {
-    --clr-base: #333333;
-    --clr-black: #000000;
-    --clr-title: #6c0086;
-    --clr-base-bg: #1d1d1d;
-    --clr-accent: #d406a8;
-    --clr-white: #ffffff;
-    --clr-subtitle: #FF13F0;
-    --clr-hover: #88009460;
-    --clr-shadow: #b1b1b170;
-    --clr-gradient1: linear-gradient(45deg, #6c0086 10%, #FF13F0 90%);
-    --clr-gradient2: linear-gradient(45deg, #FF13F0 10%, #6c0086 90%);
-    --no-color: transparent;
-}
-
 /*sizes*/
 :root {
     --txt-title1: 1.75rem;
@@ -64,33 +10,13 @@ body {
     --txt-superhero1: 2.5rem;
 }
 
-
-html {
-    background: '';
-    color: var(--clr-white);
-    text-align: center;
-    scroll-behavior: smooth;
-}
-
 /* Rule for title */
 h1 {
-    color: var(--clr-title);
     font-size: var(--txt-title);
 }
 
 p {
-    color: var(--clr-white);
     font-size: var(--txt-paragraph);
-}
-
-h1>span,
-h2>span,
-h4>span {
-    color: var(--clr-accent);
-}
-
-i {
-    color: var(--clr-subtitle);
 }
 
 /* #endregion */
@@ -98,16 +24,10 @@ i {
 
 /* #region media nav - banner*/
 
-
 @media (max-width: 768px) {
     #menu2 {
         display: none;
     }
-
-    img.logo {
-        width: auto;
-    }
-
 
     .banner {
         padding: 30px;
@@ -125,6 +45,9 @@ i {
         padding: 0 2em;
     }
 
+    .logoSandwich {
+        width: 200px !important;
+    }
 }
 
 @media (min-width: 769px) {
@@ -136,68 +59,110 @@ i {
         padding: 20px;
     }
 
+    .logoSandwich {
+        width: 30px !important;
+    }
+
 }
-
-
-
 
 /* #endregion */
 
+/* #region Servicos*/
+@media (max-width: 768px) {
+    .meladoimagem {
+        width: 80%;
+    }
+}
 
+/* #endregion */
 
 /*#region portifólio */
 
 @media (max-width: 768px) {
     .carousel {
-      height: 220px;
+        overflow: hidden;
+        /* Impede que os cards saiam da tela */
+        width: 100%;
+        padding: 10px;
     }
-  
-    .card {
-      width: 200px;
-      height: 360px;
-    }
-  }
-  
-  @media (max-width: 375px) {
-    .carousel {
-      height: 200px;
-    }
-  
-    .card {
-      width: 200px;
-      height: 270px;
-    }
-  
-    .card p {
-      font-size: 12px;
-    }
-  }
-  
-  @media (max-width: 320px) {
-    .carousel {
-      height: 120px;
-    }
-  
-    .card {
-      width: 150px;
-      height: 230px;
-    }
-  
-    .card p {
-      font-size: 10px;
-    }
-  }
 
+    .card {
+        position: absolute;
+        width: 220px;
+        /* Ajuste o tamanho para mobile */
+        height: 320px;
+    }
+
+    .card.prev-left,
+    .card.next-right {
+        display: none;
+        /* Remove os cards muito afastados */
+    }
+
+    .card.left {
+        transform: translateX(-50%) scale(0.85);
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .card.right {
+        transform: translateX(50%) scale(0.85);
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .card.active {
+        transform: translateX(0) scale(1.1);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel {
+        overflow: hidden;
+        /* Impede que os cards saiam da tela */
+        margin: 2em auto;
+        /* Centraliza o carrossel */
+        padding: 10px;
+        width: 100%;
+    }
+
+    .card {
+        width: 250px;
+        /* Reduz o tamanho dos cards */
+        height: 350px;
+    }
+
+    /* Ajuste dos cards laterais para que fiquem parcialmente visíveis */
+    .card.left {
+        transform: translateX(-75%) scale(0.9);
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    .card.right {
+        transform: translateX(75%) scale(0.9);
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    .card.prev-left,
+    .card.next-right {
+        display: none;
+        /* Oculta os cards mais distantes */
+    }
+
+    .card.active {
+        transform: translateX(0) scale(1.2);
+        opacity: 1;
+        z-index: 2
+    }
+}
 
 
 
 /*#endregion*/
-
-
-
-
-
-
 
 /*#region Fale Conosco*/
 @media (max-width: 1080px) {
@@ -359,10 +324,5 @@ i {
 }
 
 /*#endregion*/
-
-
-
-
-
 
 /*endCss*/

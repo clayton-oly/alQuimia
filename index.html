@@ -18,9 +18,11 @@
 </head>
 
 <body>
+
+    <!-- Menu Desktop -->
     <header id="home">
         <div id="menuContainer">
-            <img class="logo" src="./img/logoTopo.png" alt="Logo">
+            <img class="logoSandwich" src="./img/logoTopo.png" alt="Logo">
             <div id="menu">
                 <div id="menuBar" onclick="menuOnClick()">
                     <div id="bar1" class="bar"></div>
@@ -36,15 +38,17 @@
                             <li><a href="#projetos">PROJETOS</a></li>
                             <li><a href="#faleConosco">CONTATO</a></li>
                         </ul>
+                    </div>
                 </nav>
             </div>
         </div>
-        </div>
+
+        <!-- Menu Mobile -->
         <div class="menuBg" id="menuBg"></div>
 
         <nav>
             <div id="menu2" class="menu">
-                <div class="logo">
+                <div class="logoPrincipal">
                     <a href="#home">
                         <img src="./img/logoTopo.png" alt="AlQuimia">
                     </a>
@@ -59,11 +63,10 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <main>
-        <div class="banner" id="banner">
+        <section id="banner" class="banner">
             <ul class="bannerTopo">
                 <li>
                     <h1>Somos Especializados <span>em</span></h1>
@@ -71,8 +74,7 @@
                 </li>
                 <li>
                     <p>Somos especializados no desenvolvimento de sites profissionais e utilizamos as mais modernas
-                        técnicas
-                        para web design existentes na internet.</p>
+                        técnicas para web design existentes na internet.</p>
                 </li>
                 <li>
                     <img src="./img/desenvolvimento-de-site1_1.png" alt="card"
@@ -82,139 +84,286 @@
                     <a href="#faleConosco" class="btnDefault">Faça seu orçamento!</a>
                 </li>
             </ul>
-        </div>
-        <!-- </div> -->
-    </main>
-    <div id="servicos" class="melado">
-        <div class="melado-black">
+        </section>
 
-            <div class="text-basic">
-                <h1><span>Serviços</span></h1>
-                <br>
-                <t>Tecnologia</t>
+        <section id="sobre">
+            <div class="sobreContainer">
+                <div class="titulo">
+                    <h2>Sobre AlQuimia</h2>
+                </div>
+
+                <div class="texto">
+                    <p>Fundada em 2024, em São Paulo, a AlQuimia nasceu com a missão de transformar ideias em
+                        experiências
+                        digitais inesquecíveis. Acreditamos que um site vai além do visual – ele deve ser funcional,
+                        intuitivo e
+                        capaz de criar conexões genuínas entre marcas e pessoas.
+                        Com criatividade, inovação e atenção aos detalhes, desenvolvemos soluções digitais
+                        personalizadas
+                        para
+                        cada cliente, sempre buscando impacto e excelência. Trabalhamos lado a lado com empresas e
+                        empreendedores, entendendo suas necessidades e convertendo suas visões em plataformas digitais
+                        que
+                        se
+                        destacam.
+                        Nosso compromisso vai além da tecnologia: valorizamos a colaboração, a ética e a satisfação do
+                        cliente.
+                        Mais do que criar sites, moldamos o futuro digital de negócios que querem se destacar no
+                        mercado.
+                    </p>
+
+                </div>
+
+                <div class="frase">
+                    <p>
+                        <span>"A simplicidade é o último grau da sofisticação." – </span>
+                        <span class="colorPink">Leonardo da Vinci</span>
+                    </p>
+                </div>
+
+                <div class="quality">
+                    <div class="missao-visao">
+                        <div class="missao">
+                            <h2>MISSÃO</h2>
+                            <div class="textMissao">
+                                <p>Transformar ideias em experiências digitais excepcionais, criando websites inovadores
+                                    que
+                                    conectem marcas e pessoas, impulsionando resultados e proporcionando valor duradouro
+                                    para
+                                    nossos clientes.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="visao">
+                            <h2>VISÃO</h2>
+                            <div class="textVisao">
+                                <p>Ser reconhecida como uma referência global em soluções de desenvolvimento de sites,
+                                    combinando criatividade, tecnologia e estratégias personalizadas para moldar o
+                                    futuro
+                                    digital de empresas e empreendedores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valores">
+                        <div class="title">
+                            <h2>VALORES</h2>
+                        </div>
+                        <div class="tab-container">
+                            <div class="tab-buttons">
+                                <button class="tab-link active" data-tab="inovacao"><span>INOVAÇÃO</span></button>
+                                <button class="tab-link" data-tab="qualidade"><span>QUALIDADE</span></button>
+                                <button class="tab-link" data-tab="colaboracao"><span>COLABORAÇÃO</span></button>
+                                <button class="tab-link" data-tab="etica"><span>ÉTICA</span></button>
+                                <button class="tab-link" data-tab="satisfacao"><span>SATISFAÇÃO DO
+                                        CLIENTE</span></button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="inovacao" class="tab-pane active">
+                                    Estamos sempre em busca de novas soluções e tecnologias para criar sites modernos e
+                                    personalizados, que atendam às necessidades únicas de cada cliente. Nossa busca pela
+                                    inovação nos permite entregar resultados criativos e de alto impacto.
+                                </div>
+                                <div id="qualidade" class="tab-pane">
+                                    <p>Nosso compromisso com a qualidade garante que entregamos sites bem desenvolvidos,
+                                        rápidos e
+                                        funcionais. Cada projeto é realizado com cuidado e atenção aos detalhes, sempre
+                                        superando as
+                                        expectativas dos nossos clientes.</p>
+                                </div>
+                                <div id="colaboracao" class="tab-pane">
+                                    <p>Acreditamos na força da colaboração, trabalhando de perto com nossos clientes
+                                        para entender
+                                        suas necessidades e oferecer soluções que atendam aos seus objetivos. A parceria
+                                        constante é
+                                        essencial para alcançar os melhores resultados.</p>
+                                </div>
+                                <div id="etica" class="tab-pane">
+                                    <p>Priorizamos a transparência, honestidade e respeito em todos os nossos processos,
+                                        garantindo
+                                        que nossos clientes possam confiar em nossa integridade. Atuamos de forma ética
+                                        em todas as
+                                        fases do projeto.</p>
+                                </div>
+                                <div id="satisfacao" class="tab-pane">
+                                    <p>Nosso maior objetivo é garantir a satisfação total dos nossos clientes. Estamos
+                                        comprometidos
+                                        em oferecer soluções que não apenas atendam, mas superem suas expectativas,
+                                        criando relações
+                                        duradouras e de confiança.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valores2">
+                        <div class="tabs-nav">
+                            <div class="section-title">
+                                <h2>VALORES</h2>
+                            </div>
+                            <button class="tab-item active" data-tab="innovation">INOVAÇÃO
+                                <div id="innovation" class="tab-content active">
+                                    Estamos sempre em busca de novas soluções e tecnologias para criar sites modernos e
+                                    personalizados,
+                                    que atendam às necessidades únicas de cada cliente. Nossa busca pela inovação nos
+                                    permite entregar
+                                    resultados criativos e de alto impacto.
+                                </div>
+                            </button>
+                            <button class="tab-item" data-tab="quality">QUALIDADE
+                                <div id="quality" class="tab-content">
+                                    Nosso compromisso com a qualidade garante que entregamos sites bem desenvolvidos,
+                                    rápidos e
+                                    funcionais. Cada projeto é realizado com cuidado e atenção aos detalhes, sempre
+                                    superando as
+                                    expectativas dos nossos clientes.
+                                </div>
+                            </button>
+                            <button class="tab-item" data-tab="collaboration">COLABORAÇÃO
+                                <div id="collaboration" class="tab-content">
+                                    Acreditamos na força da colaboração, trabalhando de perto com nossos clientes para
+                                    entender suas
+                                    necessidades e oferecer soluções que atendam aos seus objetivos. A parceria
+                                    constante é essencial
+                                    para
+                                    alcançar os melhores resultados.
+                                </div>
+                            </button>
+                            <button class="tab-item" data-tab="ethics">ÉTICA
+                                <div id="ethics" class="tab-content">
+                                    Priorizamos a transparência, honestidade e respeito em todos os nossos processos,
+                                    garantindo que
+                                    nossos
+                                    clientes possam confiar em nossa integridade. Atuamos de forma ética em todas as
+                                    fases do projeto.
+                                </div>
+                            </button>
+                            <button class="tab-item" data-tab="customer-satisfaction">SATISFAÇÃO DO CLIENTE
+                                <div id="customer-satisfaction" class="tab-content">
+                                    Nosso maior objetivo é garantir a satisfação total dos nossos clientes. Estamos
+                                    comprometidos em
+                                    oferecer soluções que não apenas atendam, mas superem suas expectativas, criando
+                                    relações duradouras
+                                    e
+                                    de confiança.
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="melado">
+            <div class="melado-black">
+                <div class="text-basic">
+                    <h1><span>Serviços</span></h1>
+                    <br>
+                    <p>Tecnologia</p>
+                    <br><br>
+                    <p>Nossa cultura é nativo digital! Sempre à frente das inovações, definimos estratégias e
+                        desenvolvemos as melhores soluções para levar a sua empresa além do digital.</p>
+                </div>
+
                 <br><br>
-                <p>Nossa cultura é nativo digital! Sempre à frente das inovações, definimos estratégias e desenvolvemos
-                    as melhores soluções para levar a sua empresa além do digital.</p>
+                <ul class="meladoComBorda">
+                    <li>
+                        <p>Criação de WordPress</p>
+                    </li>
+                    <li>
+                        <p>Desenvolvimento de Site</p>
+                    </li>
+                    <li>
+                        <p>Desenvolvimento de Landing Page</p>
+                    </li>
+                    <li>
+                        <p>Desenvolvimento de Sistemas</p>
+                    </li>
+                    <li>
+                        <p>Criação de Mapas em Games (Modo Criativo)</p>
+                    </li>
+                    <li>
+                        <p>Desenvolvimento de Mapas no Metaverso (Gather Town)</p>
+                    </li>
+                </ul>
+
+                <br><br>
+                <img class="meladoimagem"
+                    src="https://cdn.pixabay.com/photo/2021/03/14/21/01/black-hole-6095410_960_720.png"
+                    alt="Imagem de destaque da seção de serviços">
             </div>
-            <!-- fim da div melado -->
+        </section>
 
-            <br><br>
-            <ul class="meladoComBorda">
-                <li>
-                    <p>Criação de WordPress</p>
-                <li>
-                    <p>Desenvolvimento de Site</p>
-                </li>
-
-                <li>
-                    <p>Desenvolvimento de Landing Page</p>
-                </li>
-
-                <li>
-                    <p>Desenvolvimento de Sistemas</p>
-                </li>
-
-                <li>
-                    <p>Criação de Mapas em Games (Modo Criativo)</p>
-                </li>
-
-                <li>
-                    <p>Desenvolvimento de Mapas no Metaverso (Gather Town)</p>
-                </li>
-
-            </ul>
-            <br>
-            <br>
-            <img class="meladoimagem"
-                src="https://cdn.pixabay.com/photo/2021/03/14/21/01/black-hole-6095410_960_720.png"
-                alt="Imagem de destaque da seção de serviços">
-
-
-        </div>
-    </div>
-
-
-
-
-    <section id="projetos">
-        <div class="portfolio">
-            <h1>PORT<span>FÓLIO</span></h1>
-
-            <div id="carousel" class="carousel">
-                <div class="card">
-                    <h2>Ana</h2>
-                    <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
-                    <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
-                    <a href="#">Saiba mais</a>
+        <section id="projetos">
+            <div class="portfolio">
+                <h1>PORT<span>FÓLIO</span></h1>
+    
+                <div id="carousel" class="carousel">
+                    <div class="card">
+                        <h2>Ana</h2>
+                        <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
+                        <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
+                        <a href="#">Saiba mais</a>
+                    </div>
+                    <div class="card">
+                        <h2>Clayton</h2>
+                        <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
+                        <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
+                        <a href="#">Saiba mais</a>
+                    </div>
+                    <div class="card">
+                        <h2>Jonathan</h2>
+                        <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
+                        <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
+                        <a href="#">Saiba mais</a>
+                    </div>
+                    <div class="card">
+                        <h2>Julia</h2>
+                        <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
+                        <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
+                        <a href="#">Saiba mais</a>
+                    </div>
+                    <div class="card">
+                        <h2>Luan</h2>
+                        <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
+                        <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
+                        <a href="#">Saiba mais</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h2>Clayton</h2>
-                    <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
-                    <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
-                    <a href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>Jonathan</h2>
-                    <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
-                    <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
-                    <a href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>Julia</h2>
-                    <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
-                    <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
-                    <a href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>Luan</h2>
-                    <p>A felicidade está nas pequenas coisas. Um sorriso, um gesto, um momento.</p>
-                    <img src="https://placehold.co/600x400/png" alt="Imagem de destaque">
-                    <a href="#">Saiba mais</a>
-                </div>
+        </section>
+
+        <section id="faleConosco" class="faleConosco">
+            <div class="contatoTitle">
+                <h1>Fale <span>Conosco</span></h1>
+                <p>Envie sua mensagem, assim que possível entraremos em contato!</p>
             </div>
 
-    </section>
+            <div class="containerFaleConosco">
+                <form action="" class="formWrapper">
+                    <input type="text" placeholder="Nome:" class="frmInput">
+                    <input type="email" placeholder="Email:" class="frmInput">
+                    <input type="tel" placeholder="Telefone:" class="frmInput">
+                    <textarea placeholder="Deixe sua mensagem:" class="frmInput"></textarea>
+                    <input type="button" id="btnEnviar" value="Enviar" class="btnEnviar">
+                </form>
 
-
-
-
-
-    <section id="faleConosco" class="faleConosco">
-
-        <div class="contatoTitle">
-            <h1>Fale <span>Conosco</span></h1>
-
-            <p>Envie sua mensagem, assim que possível entraremos em contato!</p>
-        </div>
-
-        <div class="containerFaleConosco">
-            <form action="" class="formWrapper">
-                <input type="text" placeholder="Nome:" class="frmInput">
-                <input type="email" placeholder="Email:" class="frmInput">
-                <input type="tel" placeholder="Telefone:" class="frmInput">
-                <textarea placeholder="Deixe sua mensagem:" class="frmInput"></textarea>
-                <input type="button" id="btnEnviar" value="Enviar" class="btnEnviar">
-            </form>
-
-            <div class="right">
-                <h6>AlQuimia Tech</h6>
-                <div class="telefones">
-                    <p>(11) 96215-2155</p>
-                    <p>(11) 96545-5481</p>
+                <div class="right">
+                    <h6>AlQuimia Tech</h6>
+                    <div class="telefones">
+                        <p>(11) 96215-2155</p>
+                        <p>(11) 96545-5481</p>
+                    </div>
+                    <h6>Onde estamos:</h6>
+                    <p>Rua Ficticía, 899 - Bairro da Imaginação | CEP:</p>
+                    <p>008185-689 - São Paulo/SP</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235208.22494873722!2d-44.00350990546875!3d-22.908630199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bfa303f687233%3A0x21fb16b7f7897125!2sAlquimia%20Digital!5e0!3m2!1spt-BR!2sbr!4v1742427354252!5m2!1spt-BR!2sbr"
+                        frameborder="0">
+                    </iframe>
                 </div>
-
-                <h6>Onde estamos:</h6>
-                <p>Rua Ficticía, 899 - Bairro da Imaginação | CEP:</p>
-                <p>008185-689 - São Paulo/SP</p>
-
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235208.22494873722!2d-44.00350990546875!3d-22.908630199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bfa303f687233%3A0x21fb16b7f7897125!2sAlquimia%20Digital!5e0!3m2!1spt-BR!2sbr!4v1742427354252!5m2!1spt-BR!2sbr"
-                    frameborder="0">
-                </iframe>
             </div>
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="footerContainer">
@@ -284,16 +433,12 @@
 
     </footer>
 
-
-
-
-    <script src="./js/meuscript.js"></script>
+    <script src="./js/script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-
 
 </body>
 
