@@ -98,12 +98,6 @@ p {
         font-size: 14px;
         padding: 8px 0;
     }
-
-    .meladoimagem {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -129,11 +123,6 @@ p {
         padding: 6px 0;
     }
 
-    .meladoimagem {
-        width: 90%;
-        max-width: 250px;
-        height: auto;
-    }
 }
 
 

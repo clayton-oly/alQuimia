@@ -310,7 +310,8 @@ header {
 #banner {
   background: url('../img/bg-banner1.jpg') no-repeat center center;
   background-size: cover;
-  height: 90wh;
+  height: 90vh;
+  width: 100vw;
 
 
   & .banner {
@@ -321,7 +322,6 @@ header {
   }
 
   & .bannerTopo {
-    width: 100vw;
     text-align: center;
 
     & img {
