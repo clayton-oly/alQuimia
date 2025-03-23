@@ -10,9 +10,18 @@
     --txt-superhero1: 2.5rem;
 }
 
+/* Rule for title */
+h1 {
+    font-size: var(--txt-title);
+}
+
+p {
+    font-size: var(--txt-paragraph);
+}
+
 /* #endregion */
 
-/* #region nav */
+/* #region  nav */
 @media (max-width: 849px) {
     #menu2 {
         display: none;

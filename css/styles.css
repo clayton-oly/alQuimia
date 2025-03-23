@@ -1,4 +1,5 @@
 /* #region Global  */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 /* scrollbar */
 body::-webkit-scrollbar {
@@ -16,22 +17,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  /* overflow-x: hidden !important; */
-}
-
-@font-face {
-  font-family: 'Title';
-  src: url(../font/comfortaaBoldTitle.ttf);
-}
-
-@font-face {
-  font-family: 'Parag2';
-  src: url(../font/comfortaaRegular.ttf);
-}
-
-@font-face {
-  font-family: 'text';
-  src: url(../font/comfortaaBoldTitle.ttf);
+  overflow-x: hidden !important;
 }
 
 /* basic reset */
@@ -39,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'text';
+  font-family: 'Comfortaa';
   list-style: none;
   text-decoration: none;
 }
@@ -91,11 +77,6 @@ html {
 h1 {
   color: var(--clr-title);
   font-size: var(--txt-title);
-  font-family: 'Title';
-
-  & span {
-    font-family: 'Title';
-  }
 }
 
 p {
@@ -403,6 +384,7 @@ header {
         display: flex;
         gap: 8em;
 
+        align-items: start;
 
         & .missao,
         & .visao {
@@ -435,7 +417,11 @@ header {
             text-align: center;
             padding: 1rem;
 
+            max-height: 200px;
 
+            & p {
+              font-size: 1rem;
+            }
           }
 
           &:hover {
@@ -651,60 +637,82 @@ header {
   }
 
   @media (min-width: 1200px) {
+    height: auto;
+
     .sobreContainer {
       margin: none;
+
+      .texto {
+        text-align: center;
+      }
+
+      .quality {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .missao-visao {
+          display: flex;
+          gap: 3rem;
+          justify-content: space-around;
+          width: 100%;
+          align-items: center;
+
+          .missao,
+          .visao {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            border: 1px solid var(--clr-rosa);
+            border-radius: 0.3rem;
+            transition: 0.3s;
+            margin: 0 auto;
+          }
+        }
+
+        .valores {
+          max-width: 100%;
+          margin: 0 auto;
+          border: 1px solid var(--clr-rosa);
+          padding: 1rem;
+          border-radius: 7px;
+        }
+
+        .valores2 {
+          max-width: 100%;
+          width: 100%;
+          margin: 0 auto;
+          border: 1px solid var(--clr-rosa);
+          padding: 1rem;
+          border-radius: 5px;
+        }
+      }
     }
 
-    .texto {
-      text-align: center;
-    }
+  }
 
-    .quality {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  @media (max-width: 1200px) {
+    height: auto;
 
-    .missao-visao {
-      display: flex;
-      gap: 3rem;
-      justify-content: space-around;
-      width: 100%;
-      align-items: center;
-    }
+    .sobreContainer {
+      .titulo {}
 
-    .missao,
-    .visao {
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--clr-rosa);
-      border-radius: 0.3rem;
-      transition: 0.3s;
-      margin: 0 auto;
-    }
+      .texto {}
 
-    .valores {
-      max-width: 100%;
-      margin: 0 auto;
-      border: 1px solid var(--clr-rosa);
-      padding: 1rem;
-      border-radius: 7px;
-    }
+      .frase {}
 
-    .valores2 {
-      max-width: 100%;
-      width: 100%;
-      margin: 0 auto;
-      border: 1px solid var(--clr-rosa);
-      padding: 1rem;
-      border-radius: 5px;
-    }
+      .quality {
+        .missao-visao {
+          display: flex;
 
+
+          & .missao,
+          & .visao {}
+        }
+      }
+    }
   }
 
   @media (max-width: 1024px) {
@@ -1093,6 +1101,7 @@ header {
 }
 
 
+
 /* #endregion */
 
 
@@ -1289,7 +1298,6 @@ header {
 
       input,
       textarea {
-        font-family: 'Parag2';
         font-size: var(--txt-paragraph);
         border-radius: 18px;
         margin-top: 10px;
@@ -1303,7 +1311,6 @@ header {
 
       input::placeholder,
       textarea::placeholder {
-        font-family: 'Parag2';
         color: var(--clr-white);
       }
 
@@ -1330,7 +1337,6 @@ header {
       text-align: left;
 
       h6 {
-        font-family: 'Parag2';
         font-size: 30px;
         color: var(--clr-title);
         margin-top: 15px;
@@ -1345,7 +1351,6 @@ header {
       }
 
       p {
-        font-family: 'Parag2';
         font-size: var(--txt-paragraph);
         margin-top: 5px;
       }
