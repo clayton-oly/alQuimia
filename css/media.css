@@ -10,21 +10,10 @@
     --txt-superhero1: 2.5rem;
 }
 
-/* Rule for title */
-h1 {
-    font-size: var(--txt-title);
-}
-
-p {
-    font-size: var(--txt-paragraph);
-}
-
 /* #endregion */
 
-
-/* #region media nav - banner*/
-
-@media (max-width: 768px) {
+/* #region nav */
+@media (max-width: 849px) {
     #menu2 {
         display: none;
     }
@@ -50,7 +39,7 @@ p {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 850px) {
     #menuContainer {
         display: none;
     }
@@ -65,13 +54,25 @@ p {
 
 }
 
+@media (max-width: 320px) {
+    .logoSandwich {
+        width: 150px !important;
+        margin-left: 20px;
+    }
+
+    #home {
+        height: 230px !important;
+    }
+}
+
 /* #endregion */
 
 /* #region Servicos*/
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .melado {
         padding: 20px;
         text-align: center;
+        height: auto;
     }
 
     .melado-black {
@@ -82,11 +83,37 @@ p {
     }
 
     .text-basic h1 {
-        font-size: 24px;
+        font-size: 35px !important;
+        margin: 0 !important;
     }
 
     .text-basic p {
-        font-size: 16px;
+        font-size: 30px !important;
+    }
+
+    .meladoComBorda {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .meladoComBorda li {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .melado {
+        height: auto;
+    }
+
+    .text-basic h1 {
+        font-size: 24px !important;
+    }
+
+    .text-basic p {
+        font-size: 16px !important;
     }
 
     .meladoComBorda {
@@ -98,43 +125,61 @@ p {
         font-size: 14px;
         padding: 8px 0;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .melado {
-        padding: 15px;
-        text-align: center;
+    .meladoComBorda p {
+        font-size: 16px !important;
     }
 
-    .melado-black {
-        padding: 10px;
+}
+
+@media (max-width: 320px) {
+    .melado {
+        height: auto;
     }
 
     .text-basic h1 {
-        font-size: 20px;
+        font-size: 24px !important;
     }
 
     .text-basic p {
-        font-size: 14px;
+        font-size: 16px !important;
+    }
+
+    .meladoComBorda {
+        padding: 0;
+        list-style-type: none;
     }
 
     .meladoComBorda li {
-        font-size: 12px;
-        padding: 6px 0;
+        font-size: 14px;
+        padding: 8px 0;
     }
 
+    .meladoComBorda p {
+        font-size: 16px !important;
+    }
 }
-
-
 
 /* #endregion */
 
 /*#region portifólio */
 @media (min-width: 1024px) {
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Centraliza verticalmente */
+        flex-direction: column;
+        /* Garante que o h1 e o carousel fiquem na mesma coluna */
+        height: 100vh;
+        /* Garante que o contêiner tenha altura de tela cheia */
+    }
+
     .carousel {
         display: flex;
         justify-content: center;
         align-items: center;
+        /* Centraliza o conteúdo do carousel */
         height: 60vh;
         margin: 3em;
         padding: 20px;
@@ -142,8 +187,10 @@ p {
     }
 
     .card {
-        width: 250px;
-        height: 350px;
+        width: 300px;
+        /* Tamanho maior dos cards em telas maiores */
+        height: 400px;
+        /* Tamanho maior dos cards */
         background: var(--clr-gradient2);
         border-radius: 10px;
         opacity: 1;
@@ -159,13 +206,29 @@ p {
         z-index: 2;
         background: var(--clr-gradient2);
     }
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 1024px) {
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     .carousel {
         height: 50vh;
-        margin: 4em;
-        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto;
+        padding: 10px;
     }
 
     .card {
@@ -174,6 +237,7 @@ p {
         background: var(--clr-gradient2);
         border-radius: 10px;
         opacity: 0.7;
+        margin: 0 10px;
     }
 
     .card p {
@@ -209,13 +273,31 @@ p {
         z-index: 2;
         background: var(--clr-gradient2);
     }
+
+    h1 {
+        font-size: 2rem;
+        color: var(--clr-white);
+        text-align: center;
+        margin-bottom: 2em;
+    }
 }
 
 @media (max-width: 768px) {
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     .carousel {
-        height: 45vh;
         margin: 3em;
         padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto;
     }
 
     .card {
@@ -308,8 +390,14 @@ p {
 }
 
 @media (max-width: 320px) {
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Centraliza a portfolio */
+    }
+
     .carousel {
-        height: 35vh;
         margin: 1.5em;
         padding: 5px;
     }
@@ -435,10 +523,8 @@ p {
     }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 480px) {
     #faleConosco {
-        height: auto;
-        padding: 15px;
 
         .contatoTitle {
             h1 {
@@ -458,35 +544,69 @@ p {
         }
 
         .formWrapper {
-            max-width: 70% !important;
-
 
             input,
             textarea {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            .btnEnviar {
-                width: 120px;
+                font-size: 20px !important;
+                padding: 10px !important;
             }
         }
 
         .right {
-            max-width: 100%;
-            text-align: center !important;
-
-            .telefones {
-                text-align: center !important;
-                display: block !important;
-            }
-
             h6 {
-                font-size: 24px;
+                font-size: 24px !important;
             }
 
             p {
-                font-size: 14px;
+                font-size: 20px !important;
+            }
+        }
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    #faleConosco {
+
+        .contatoTitle {
+            h1 {
+                font-size: 22px !important;
+            }
+
+            p {
+                font-size: 16px !important;
+            }
+        }
+
+        .containerFaleConosco {
+            flex-direction: column;
+
+            align-items: center;
+            gap: 10px;
+        }
+
+        .formWrapper {
+            max-width: 100% !important;
+
+            input,
+            textarea {
+                font-size: 16px !important;
+                padding: 10px !important;
+            }
+        }
+
+        .right {
+            h6 {
+                font-size: 24px !important;
+            }
+
+            p {
+                font-size: 18px !important;
             }
 
             iframe {

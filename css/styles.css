@@ -21,7 +21,7 @@ body {
 
 @font-face {
   font-family: 'Title';
-  src: url(../font/DevilCandleTitle.otf);
+  src: url(../font/comfortaaBoldTitle.ttf);
 }
 
 @font-face {
@@ -33,7 +33,6 @@ body {
   font-family: 'text';
   src: url(../font/comfortaaBoldTitle.ttf);
 }
-
 
 /* basic reset */
 * {
@@ -147,6 +146,7 @@ header {
     gap: 2rem;
     background-color: var(--clr-black);
     border-radius: 10px;
+    height: 12vh;
 
     & .menu {
       width: 100%;
@@ -305,14 +305,13 @@ header {
 
 /*#endregion*/
 
-
 /* #region  banner */
 #banner {
   background: url('../img/bg-banner1.jpg') no-repeat center center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 90vh;
+  height: 88vh;
 
   & .banner {
     display: flex;
@@ -325,7 +324,7 @@ header {
     text-align: center;
 
     & img {
-      width: 50%;
+      width: 40%;
     }
 
     & li {
@@ -652,7 +651,6 @@ header {
   }
 
   @media (min-width: 1200px) {
-
     .sobreContainer {
       margin: none;
     }
@@ -709,7 +707,13 @@ header {
 
   }
 
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+
   @media (max-width: 768px) {
+    height: auto;
+
     .sobreContainer {
       margin: none;
 
@@ -851,15 +855,243 @@ header {
   }
 
   @media (max-width: 480px) {
-    .sobreContainer {
-      margin: none;
+    height: auto;
+    display: block;
 
-      .valores {
-        display: none;
+    .sobreContainer {
+      margin: 0;
+      padding: 0;
+
+      .texto {
+        font-size: 0.9rem;
+        padding: 0.8em;
+
+        & p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .frase {
+        padding: 0;
+      }
+
+      .quality {
+        display: flex;
+        flex-direction: column;
+        gap: none;
+
+        .missao-visao {
+          display: flex;
+          flex-direction: column;
+
+          gap: 1em;
+
+          .missao,
+          .visao {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin-bottom: 0;
+
+            & h2 {
+              font-size: 1rem;
+              padding: 0.4rem;
+            }
+
+            .textMissao,
+            .textVisao {
+              font-size: 0.25em;
+              padding: 0;
+
+              & p {
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        .valores {
+          padding: 0.8rem;
+
+          .tab-container {
+            padding: 0.8rem;
+
+            .tab-buttons {
+              display: flex;
+              flex-direction: column;
+
+              & button {
+
+                padding: 1rem;
+                margin: 0.5rem 0;
+
+                font-size: 1rem;
+              }
+            }
+
+            .tab-content {
+              padding: 1rem;
+            }
+          }
+        }
+
+        .valores2 {
+          padding: 0.5em;
+
+          .tabs-nav {
+            .section-title {
+              font-size: 1em;
+              padding: 0;
+            }
+
+            .tab-item {
+              position: relative;
+              font-size: 0.8em;
+              padding: 1em;
+
+              .tab-content {
+                padding: 0;
+                border-top: 1px solid var(--clr-rosa-transparente);
+              }
+
+              .tab-content.tab-content.active {
+                padding-top: 5px;
+                border-top: 1px solid var(--clr-rosa-transparente);
+                margin: 0;
+
+              }
+            }
+
+            .tab-item.active {}
+          }
+        }
+      }
+    }
+
+    .valores {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 320px) {
+    display: block;
+    height: auto;
+
+    .sobreContainer {
+      margin: 0;
+      padding: 0;
+
+      .texto {
+        font-size: 0.9rem;
+        padding: 0.8em;
+
+        & p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .frase {
+        padding: 0;
+      }
+
+      .quality {
+        display: flex;
+        flex-direction: column;
+        gap: none;
+
+        .missao-visao {
+          display: flex;
+          flex-direction: column;
+
+          gap: 1em;
+
+          .missao,
+          .visao {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin-bottom: 0;
+
+            & h2 {
+              font-size: 1rem;
+              padding: 0.4rem;
+            }
+
+            .textMissao,
+            .textVisao {
+              font-size: 0.25em;
+              padding: 0;
+
+              & p {
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        .valores {
+          padding: 0.8rem;
+
+          .tab-container {
+            padding: 0.8rem;
+
+            .tab-buttons {
+              display: flex;
+              flex-direction: column;
+
+              & button {
+
+                padding: 1rem;
+                margin: 0.5rem 0;
+
+                font-size: 1rem;
+              }
+            }
+
+            .tab-content {
+              padding: 1rem;
+            }
+          }
+        }
+
+        .valores2 {
+          padding: 0.5em;
+
+          .tabs-nav {
+            .section-title {
+              font-size: 1em;
+              padding: 0;
+            }
+
+            .tab-item {
+              position: relative;
+              font-size: 0.8em;
+              padding: 1em;
+
+              .tab-content {
+                padding: 0;
+                border-top: 1px solid var(--clr-rosa-transparente);
+              }
+
+              .tab-content.tab-content.active {
+                padding-top: 5px;
+                border-top: 1px solid var(--clr-rosa-transparente);
+                margin: 0;
+
+              }
+            }
+
+            .tab-item.active {}
+          }
+        }
       }
     }
   }
 }
+
 
 /* #endregion */
 
@@ -932,23 +1164,24 @@ header {
 
 /* #region portifólio  */
 
-.portfolio {
-  padding: 3em;
-  background-image: url('../img/bg-portifolio.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#projetos {
   height: 100vh;
-}
 
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-  margin: 5em;
-  padding: 20px;
-  height: 60vh;
+  .portfolio {
+    padding: 3em;
+    background-image: url(../img/bg-portifolio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 5em;
+      padding: 20px;
+      overflow: hidden;
+    }
+  }
 }
 
 .card {
@@ -965,54 +1198,49 @@ header {
   color: var(--clr-white);
   text-align: center;
 
+  img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  &.prev-left {
+    transform: translateX(-250%) scale(0.8);
+    z-index: 0;
+    opacity: 0.1;
+  }
+
+  &.left {
+    transform: translateX(-150%) scale(0.9);
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  &.right {
+    transform: translateX(150%) scale(0.9);
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  &.next-right {
+    transform: translateX(250%) scale(0.8);
+    z-index: 0;
+    opacity: 0.1;
+  }
+
+  &.active {
+    transform: translateX(0) scale(1.7);
+    opacity: 1;
+    z-index: 2;
+    background: var(--clr-gradient2);
+  }
 }
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.card p {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.card.prev-left {
-  transform: translateX(-250%) scale(0.8);
-  z-index: 0;
-  opacity: 0.1;
-}
-
-.card.left {
-  transform: translateX(-150%) scale(0.9);
-  z-index: 1;
-  opacity: 0.1;
-}
-
-.card.right {
-  transform: translateX(150%) scale(0.9);
-  z-index: 1;
-  opacity: 0.1;
-}
-
-.card.next-right {
-  transform: translateX(250%) scale(0.8);
-  z-index: 0;
-  opacity: 0.1;
-
-}
-
-.card.active {
-  transform: translateX(0) scale(1.7);
-  opacity: 1;
-  z-index: 2;
-  background: var(--clr-gradient2);
-
-}
-
-
 
 /* #endregion */
 
