@@ -704,6 +704,33 @@
 /*#endregion*/
 
 /*#region Fale Conosco*/
+
+@media (min-width: 1200px) {
+    #faleConosco {
+        height: auto;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    #faleConosco {
+        height: auto;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+}
+
 @media (max-width: 1024px) {
     #faleConosco {
         height: auto;
