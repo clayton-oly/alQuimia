@@ -31,7 +31,6 @@ body {
   text-decoration: none;
 }
 
-
 /* Pallet colors - Site*/
 :root {
   --clr-pink: #CF2DF4;
@@ -46,14 +45,112 @@ body {
   --clr-gradient2: linear-gradient(45deg, #FF13F0 10%, #6c0086 90%);
 }
 
-/*sizes*/
+/* Sizes */
 :root {
-  --txt-title: 3.5rem;
-  --txt-subtitle: 1.5rem;
-  --txt-paragraph: 1.5rem;
-  --txt-anchor: .8rem;
-  --txt-icon: 2rem;
-  --txt-superhero: 5rem;
+  --txt-h1: 3rem;
+  /* 48px */
+  --txt-h2: 2.5rem;
+  /* 40px */
+  --txt-h3: 2rem;
+  /* 32px */
+  --txt-h4: 1.75rem;
+  /* 28px */
+  --txt-h5: 1.375rem;
+  /* 22px */
+  --txt-h6: 1.125rem;
+  /* 18px */
+  --txt-paragraph: 1.125rem;
+  /* 18px */
+  --txt-anchor: 1rem;
+  /* 16px */
+}
+
+/* Telas até 1024px (tablets e pequenos desktops) */
+@media (max-width: 1024px) {
+  :root {
+    --txt-h1: 2.75rem;
+    /* 44px */
+    --txt-h2: 2.25rem;
+    /* 36px */
+    --txt-h3: 1.875rem;
+    /* 30px */
+    --txt-h4: 1.5rem;
+    /* 24px */
+    --txt-h5: 1.25rem;
+    /* 20px */
+    --txt-h6: 1.0625rem;
+    /* 17px */
+    --txt-paragraph: 1.0625rem;
+    /* 17px */
+    --txt-anchor: 0.9rem;
+    /* 14.4px */
+  }
+}
+
+/* Telas até 768px (tablets menores) */
+@media (max-width: 768px) {
+  :root {
+    --txt-h1: 2.5rem;
+    /* 40px */
+    --txt-h2: 2rem;
+    /* 32px */
+    --txt-h3: 1.75rem;
+    /* 28px */
+    --txt-h4: 1.375rem;
+    /* 22px */
+    --txt-h5: 1.125rem;
+    /* 18px */
+    --txt-h6: 1rem;
+    /* 16px */
+    --txt-paragraph: 1rem;
+    /* 16px */
+    --txt-anchor: 0.85rem;
+    /* 13.6px */
+  }
+}
+
+/* Telas até 480px (smartphones grandes) */
+@media (max-width: 480px) {
+  :root {
+    --txt-h1: 2rem;
+    /* 32px */
+    --txt-h2: 1.75rem;
+    /* 28px */
+    --txt-h3: 1.5rem;
+    /* 24px */
+    --txt-h4: 1.25rem;
+    /* 20px */
+    --txt-h5: 1.0625rem;
+    /* 17px */
+    --txt-h6: 0.9375rem;
+    /* 15px */
+    --txt-paragraph: 0.95rem;
+    /* 15.2px */
+    --txt-anchor: 0.8rem;
+    /* 12.8px */
+  }
+}
+
+/* Telas até 320px (smartphones pequenos) */
+@media (max-width: 320px) {
+  :root {
+    --txt-h1: 1.75rem;
+    /* 28px */
+    --txt-h2: 1.5rem;
+    /* 24px */
+    --txt-h3: 1.375rem;
+    /* 22px */
+    --txt-h4: 1.125rem;
+    /* 18px */
+    --txt-h5: 1rem;
+    /* 16px */
+    --txt-h6: 0.875rem;
+    /* 14px */
+    --txt-paragraph: 0.9rem;
+    /* 14.4px */
+    --txt-anchor: 0.75rem;
+    /* 12px */
+  }
 }
 
 html {
@@ -64,7 +161,31 @@ html {
 /* Rule for title */
 h1 {
   color: var(--clr-pink);
-  font-size: var(--txt-title);
+  font-size: var(--txt-h1);
+}
+
+h2 {
+  color: var(--clr-pink);
+  font-size: var(--txt-h2);
+}
+
+h3 {
+  font-size: var(--txt-h3);
+}
+
+h4 {
+  font-size: var(--txt-h4);
+  color: var(--clr-white);
+}
+
+h5 {
+  font-size: var(--txt-h5);
+  color: var(--clr-pink);
+}
+
+h6 {
+  font-size: var(--txt-h6);
+  color: var(--clr-pink);
 }
 
 p {
@@ -100,40 +221,43 @@ i {
 /*#region nav*/
 header {
   background: var(--clr-black);
+  height: 6vh;
 
   & nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 2rem;
     background-color: var(--clr-black);
     border-radius: 10px;
-    height: 12vh;
+    position: fixed;
+    z-index: 99;
 
     & .menu {
       width: 100%;
-      padding: 1rem;
       display: flex;
       justify-content: space-around;
       align-items: center;
       position: relative;
+      background-color: red;
+
 
       .logoPrincipal {
-        gap: 2rem;
+
         opacity: .9;
-        transition: .8s;
+        transition: all .3s ease-in-out;
         cursor: pointer;
         z-index: 1;
 
         img {
-          width: 200px !important;
+          width: 100px;
+          height: auto;
         }
+
 
 
         &:hover {
           opacity: 1;
-          transform: scale(1.4);
+          transform: scale(1.1);
           filter: drop-shadow(0 0 10px var(--clr-hover));
         }
       }
@@ -146,7 +270,7 @@ header {
       & li {
         padding: 1em;
         cursor: pointer;
-        margin: 0 .5em;
+        transition: transform .3s ease-in-out;
 
 
         & a {
@@ -157,10 +281,10 @@ header {
 
         &:hover {
           opacity: 1;
-          transform: scale(1.5);
+          transform: scale(1.1);
 
           & a {
-            color: var(--clr-subtitle);
+            color: var(--clr-pink);
           }
         }
       }
@@ -204,7 +328,7 @@ header {
 .bar {
   height: 5px;
   width: 100%;
-  background-color: var(--clr-title);
+  background-color: var(--clr-pink);
   display: block;
   border-radius: 5px;
   transition: 0.3s ease;
@@ -225,11 +349,11 @@ header {
   & ul {
     padding: 0 22px;
 
-    li {
+    & li {
       list-style: none;
       padding: 9px 0;
 
-      a {
+      & a {
         color: var(--clr-white);
         font-size: 15px;
         text-decoration: none;
@@ -250,7 +374,7 @@ header {
   display: block;
 
   .bar {
-    background-color: var(--clr-subtitle);
+    background-color: var(--clr-pink);
   }
 
   #bar1 {
@@ -274,7 +398,9 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 88vh;
+  display: flex;
+  align-items: center;
+  height: 94vh;
 
   & .banner {
     display: flex;
@@ -317,7 +443,9 @@ header {
 /* #region sobre*/
 #sobre {
   background: var(--clr-black);
-  height: 100vh;
+  height: 94vh;
+  padding-top: 6vh;
+  /* Garante que o conteúdo não fique atrás do menu */
 
 
   .sobreContainer {
@@ -330,16 +458,15 @@ header {
     max-width: 1200px;
 
     .titulo {
-      color: var(--clr-rosa);
+      color: var(--clr-pink);
       text-align: center;
       display: flex;
       justify-content: center;
       padding: 1.5rem;
-      font-size: 2rem;
     }
 
     .texto {
-      color: var(--clr-branco);
+      color: var(--clr-white);
       text-align: center;
       padding: 1rem 10rem 0;
       font-size: 1rem;
@@ -347,12 +474,12 @@ header {
     }
 
     .frase {
-      color: var(--clr-branco);
+      color: var(--clr-white);
       text-align: center;
       padding: 2rem 0 0;
 
       & .colorPink {
-        color: var(--clr-rosa);
+        color: var(--clr-pink);
       }
     }
 
@@ -370,7 +497,7 @@ header {
 
         & .missao,
         & .visao {
-          border: 1px solid var(--clr-rosa);
+          border: 1px solid var(--clr-pink);
           border-radius: 0.3rem;
           cursor: pointer;
           height: 3.5rem;
@@ -384,10 +511,8 @@ header {
 
           & h2 {
             padding: .7rem 6rem;
-            font-size: 1.5rem;
-            color: var(--clr-rosa);
+            color: var(--clr-pink);
             text-align: center;
-
           }
 
 
@@ -395,7 +520,7 @@ header {
           & .textVisao {
             transition: all .3s ease;
             display: none;
-            color: var(--clr-branco);
+            color: var(--clr-white);
             text-align: center;
             padding: 1rem;
 
@@ -407,15 +532,15 @@ header {
           }
 
           &:hover {
-            border: 1px solid var(--clr-branco);
+            border: 1px solid var(--clr-white);
             height: 200px;
 
             & h2 {
-              color: var(--clr-branco);
+              color: var(--clr-white);
             }
 
             & p {
-              color: var(--clr-rosa);
+              color: var(--clr-pink);
             }
 
             & .textMissao,
@@ -428,7 +553,7 @@ header {
       }
 
       .valores {
-        border: 1px solid var(--clr-rosa);
+        border: 1px solid var(--clr-pink);
         border-radius: 7px;
         padding: 1rem;
         margin: auto;
@@ -437,15 +562,15 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--clr-rosa);
+          color: var(--clr-pink);
           padding: 0.8em;
         }
 
         .tab-container {
 
-          background: var(--clr-transparente);
+          background: var(--clr-transparent);
           border-radius: 5px;
-          border: 1px solid var(--clr-rosa);
+          border: 1px solid var(--clr-pink);
 
           .tab-buttons {
             display: flex;
@@ -455,23 +580,23 @@ header {
               flex: 1;
               padding: 0.8em;
               border: none;
-              background: var(--clr-roxo-transparente);
+              background: var(--clr-transparent-purple);
               cursor: pointer;
               font-size: 16px;
               transition: 0.3s;
               position: relative;
               z-index: 2;
-              color: var(--clr-rosa);
+              color: var(--clr-pink);
 
               &:hover {
-                color: var(--clr-branco);
+                color: var(--clr-white);
                 background: #8216DD30;
                 border-radius: 5px 5px 0 0;
 
               }
 
               &.active {
-                color: var(--clr-branco);
+                color: var(--clr-white);
               }
 
               & span {
@@ -486,7 +611,7 @@ header {
               bottom: 0;
               height: 1px;
               width: 100%;
-              background: var(--clr-rosa);
+              background: var(--clr-pink);
             }
 
             button.active::before {
@@ -496,10 +621,10 @@ header {
               left: 0;
               right: 0;
               bottom: 0;
-              border: 1px solid var(--clr-rosa);
+              border: 1px solid var(--clr-pink);
               border-bottom: none;
               border-radius: 5px 5px 0 0;
-              background: var(--clr-roxo-escuro);
+              background: var(--clr-dark-purple);
               z-index: 1;
               color: #333;
             }
@@ -509,10 +634,10 @@ header {
           .tab-content {
             padding: 1em;
             border-radius: 0 0 5px 5px;
-            background: var(--clr-roxo-escuro);
-            border: 1px solid var(--clr-rosa);
+            background: var(--clr-dark-purple);
+            border: 1px solid var(--clr-pink);
             border-top: none;
-            color: var(--clr-branco);
+            color: var(--clr-white);
 
             .tab-pane.active {
               display: block;
@@ -527,7 +652,7 @@ header {
 
       .valores2 {
         display: none;
-        border: 1px solid var(--clr-rosa);
+        border: 1px solid var(--clr-pink);
         padding: 1rem;
         border-radius: 5px;
 
@@ -544,7 +669,7 @@ header {
             align-items: center;
 
             h2 {
-              color: var(--clr-rosa);
+              color: var(--clr-pink);
               padding: 0.5em;
               font-size: 1em;
               cursor: default;
@@ -556,9 +681,9 @@ header {
             width: 100%;
             padding: 1rem;
             text-align: center;
-            background: var(--clr-roxo-transparente);
-            color: var(--clr-branco);
-            border: 1px solid var(--clr-rosa);
+            background: var(--clr-transparent-purple);
+            color: var(--clr-white);
+            border: 1px solid var(--clr-pink);
             cursor: pointer;
             margin-bottom: 5px;
             font-size: 1em;
@@ -575,12 +700,12 @@ header {
             }
 
             &:hover {
-              background: var(--clr-rosa-transparente);
+              background: var(--clr-pink-transparente);
             }
           }
 
           & .tab-item.active {
-            background: var(--clr-transparente);
+            background: var(--clr-transparent);
 
             .tab-content.active {
               display: block;
@@ -595,10 +720,6 @@ header {
             margin: none;
           }
 
-          .section-title {
-            font-size: 1.5em;
-          }
-
           .tab-item {
             position: relative;
           }
@@ -606,7 +727,7 @@ header {
           .tab-item .tab-content {
             display: block;
             padding: 1rem;
-            border-top: 1px solid var(--clr-rosa-transparente);
+            border-top: 1px solid var(--clr-pink-transparente);
           }
 
 
@@ -619,7 +740,6 @@ header {
   }
 
   @media (min-width: 1200px) {
-    height: auto;
 
     .sobreContainer {
       margin: none;
@@ -647,7 +767,7 @@ header {
             width: 100%;
             height: 3rem;
             display: flex;
-            border: 1px solid var(--clr-rosa);
+            border: 1px solid var(--clr-pink);
             border-radius: 0.3rem;
             transition: 0.3s;
             margin: 0 auto;
@@ -657,7 +777,7 @@ header {
         .valores {
           max-width: 100%;
           margin: 0 auto;
-          border: 1px solid var(--clr-rosa);
+          border: 1px solid var(--clr-pink);
           padding: 1rem;
           border-radius: 7px;
         }
@@ -666,7 +786,7 @@ header {
           max-width: 100%;
           width: 100%;
           margin: 0 auto;
-          border: 1px solid var(--clr-rosa);
+          border: 1px solid var(--clr-pink);
           padding: 1rem;
           border-radius: 5px;
         }
@@ -734,7 +854,7 @@ header {
 
           & .missao,
           & .visao {
-            border: 1px solid var(--clr-rosa);
+            border: 1px solid var(--clr-pink);
             border-radius: 0.3rem;
             cursor: pointer;
             height: 3.5rem;
@@ -752,13 +872,13 @@ header {
         }
 
         .valores {
-          border: 1px solid var(--clr-rosa);
+          border: 1px solid var(--clr-pink);
           border-radius: 7px;
           padding: 1rem;
 
           .tab-container {
             display: flex;
-            background: var(--clr-transparente);
+            background: var(--clr-transparent);
             border-radius: 5px;
 
             .tab-buttons {
@@ -775,16 +895,16 @@ header {
                 transition: 0.3s;
                 position: relative;
                 z-index: 2;
-                color: var(--clr-rosa);
+                color: var(--clr-pink);
 
                 &:hover {
-                  color: var(--clr-branco);
+                  color: var(--clr-white);
                   background: #8216DD30;
                   border-radius: 5px 0 0 5px;
                 }
 
                 &.active {
-                  color: var(--clr-branco);
+                  color: var(--clr-white);
                 }
 
                 & span {
@@ -801,7 +921,7 @@ header {
                 bottom: 0;
                 height: 100%;
                 width: 1px;
-                background: var(--clr-rosa);
+                background: var(--clr-pink);
               }
 
               button.active::before {
@@ -811,10 +931,10 @@ header {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                border: 1px solid var(--clr-rosa);
+                border: 1px solid var(--clr-pink);
                 border-right: none;
                 border-radius: 5px 0 0 5px;
-                background: var(--clr-roxo-escuro);
+                background: var(--clr-dark-purple);
                 z-index: 1;
               }
             }
@@ -822,9 +942,9 @@ header {
             .tab-content {
               display: flex;
               padding: 1em;
-              background: var(--clr-roxo-escuro);
-              border: 1px solid var(--clr-rosa);
-              color: var(--clr-branco);
+              background: var(--clr-dark-purple);
+              border: 1px solid var(--clr-pink);
+              color: var(--clr-white);
               border-radius: 0 5px 5px 0;
               border-left: none;
               justify-content: center;
@@ -942,12 +1062,12 @@ header {
 
               .tab-content {
                 padding: 0;
-                border-top: 1px solid var(--clr-rosa-transparente);
+                border-top: 1px solid var(--clr-pink-transparente);
               }
 
               .tab-content.tab-content.active {
                 padding-top: 5px;
-                border-top: 1px solid var(--clr-rosa-transparente);
+                border-top: 1px solid var(--clr-pink-transparente);
                 margin: 0;
 
               }
@@ -1063,12 +1183,12 @@ header {
 
               .tab-content {
                 padding: 0;
-                border-top: 1px solid var(--clr-rosa-transparente);
+                border-top: 1px solid var(--clr-pink-transparente);
               }
 
               .tab-content.tab-content.active {
                 padding-top: 5px;
-                border-top: 1px solid var(--clr-rosa-transparente);
+                border-top: 1px solid var(--clr-pink-transparente);
                 margin: 0;
 
               }
@@ -1089,11 +1209,9 @@ header {
 
 /*#region serviços */
 .melado {
-  background: url('../img/bgfundoServicos.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+  height: 94vh;
+  padding-top: 6vh;
+  /* Garante que o conteúdo não fique atrás do menu */
 
   .melado-black {
     height: 100%;
@@ -1106,7 +1224,6 @@ header {
 
     & p {
       color: var(--clr-white);
-      font-size: var(--txt-paragraph);
       text-align: center;
       margin: 0 auto;
       line-height: 1.5;
@@ -1138,7 +1255,6 @@ header {
 
           & p {
             color: var(--clr-white);
-            font-size: 1rem;
             padding: 1em;
           }
 
@@ -1169,7 +1285,9 @@ header {
 /* #region portifólio  */
 
 #projetos {
-  height: 100vh;
+  height: auto;
+  padding-top: 6vh;
+  /* Garante que o conteúdo não fique atrás do menu */
 
   .portfolio {
     padding: 3em;
@@ -1207,7 +1325,6 @@ header {
   }
 
   p {
-    font-size: 14px;
     margin: 5px 0;
   }
 
@@ -1251,7 +1368,7 @@ header {
 
 #faleConosco {
   background-image: url('../img/bannner_faleConosco.png');
-  height: 80vh;
+  height: 74vh;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -1282,7 +1399,6 @@ header {
 
       label {
         display: block;
-        font-size: var(--txt-paragraph);
         color: var(--clr-white);
         margin-top: 10px;
       }
@@ -1303,6 +1419,7 @@ header {
       input::placeholder,
       textarea::placeholder {
         color: var(--clr-white);
+        font-size: var(--txt-paragraph);
       }
 
       textarea {
@@ -1315,7 +1432,7 @@ header {
         cursor: pointer;
 
         &:hover {
-          background: var(--clr-subtitle);
+          background: var(--clr-pink);
         }
       }
     }
@@ -1327,9 +1444,7 @@ header {
       max-width: 600px;
       text-align: left;
 
-      h6 {
-        font-size: 30px;
-        color: var(--clr-title);
+      h5 {
         margin-top: 15px;
       }
 
@@ -1341,7 +1456,6 @@ header {
       }
 
       p {
-        font-size: var(--txt-paragraph);
         margin-top: 5px;
       }
 
@@ -1358,7 +1472,7 @@ header {
 
 footer {
   height: 20vh;
-  background-color: black;
+  background-color: var(--clr-black);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1376,7 +1490,6 @@ footer {
     ul {
       li {
         p {
-          font-size: 15px;
           margin: 15px;
           cursor: pointer;
         }
@@ -1385,14 +1498,13 @@ footer {
   }
 
   .line {
-    border-top: 1px solid var(--clr-subtitle);
+    border-top: 1px solid var(--clr-pink);
     width: 90%;
     max-width: 500px;
     margin: 15px;
   }
 
   .footerLogo {
-    font-size: 1.5rem !important;
 
     & li {
       & a {

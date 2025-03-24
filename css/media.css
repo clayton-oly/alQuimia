@@ -1,28 +1,29 @@
-/* #region Global  */
-
-/*sizes*/
-:root {
-    --txt-title1: 1.75rem;
-    --txt-subtitle1: .75rem;
-    --txt-paragraph1: .80rem;
-    --txt-anchor1: .4rem;
-    --txt-icon1: 1.5rem;
-    --txt-superhero1: 2.5rem;
-}
-
-/* Rule for title */
-h1 {
-    font-size: var(--txt-title);
-}
-
-p {
-    font-size: var(--txt-paragraph);
-}
-
-/* #endregion */
-
 /* #region  nav */
+@media (min-width: 1200px) {
+
+    & .bannerTopo {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    & .banner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    & .bannerTopo {
+        text-align: left;
+    }
+}
+
+
 @media (max-width: 849px) {
+    header {
+        height: 8vh;
+    }
+
     #menu2 {
         display: none;
     }
@@ -33,22 +34,21 @@ p {
 
     h1 {
         transition: all 0.3s;
-        font-size: var(--txt-title1);
     }
 
     p {
         transition: all 0.3s;
-        font-size: var(--txt-paragraph1);
         margin: 5px;
         padding: 0 2em;
     }
 
     .logoSandwich {
-        width: 200px !important;
+        width: 100px !important;
     }
 }
 
 @media (min-width: 850px) {
+
     #menuContainer {
         display: none;
     }
@@ -82,9 +82,7 @@ p {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
         text-align: center;
-        height: auto;
 
         .melado-black {
             display: flex;
@@ -94,12 +92,7 @@ p {
 
             .text-basic {
                 h1 {
-                    font-size: 28px;
                     margin: 0;
-                }
-
-                p {
-                    font-size: 24px;
                 }
             }
         }
@@ -156,7 +149,6 @@ p {
         list-style-type: none;
 
         li {
-            font-size: 16px;
             padding: 8px 0;
         }
     }
@@ -179,13 +171,10 @@ p {
 
             .text-basic {
                 h1 {
-                    font-size: 28px;
                     margin: 0;
                 }
 
-                p {
-                    font-size: 24px;
-                }
+                p {}
             }
         }
     }
@@ -254,12 +243,7 @@ p {
 
             .text-basic {
                 h1 {
-                    font-size: 28px;
                     margin: 0;
-                }
-
-                p {
-                    font-size: 24px;
                 }
             }
         }
@@ -270,7 +254,6 @@ p {
         list-style-type: none;
 
         li {
-            font-size: 16px;
             padding: 8px 0;
         }
     }
@@ -290,12 +273,7 @@ p {
 
             .text-basic {
                 h1 {
-                    font-size: 35px;
                     margin: 0;
-                }
-
-                p {
-                    font-size: 30px;
                 }
             }
         }
@@ -306,7 +284,6 @@ p {
         list-style-type: none;
 
         li {
-            font-size: 18px;
             padding: 8px 0;
         }
     }
@@ -315,16 +292,6 @@ p {
 @media (max-width: 480px) {
     .melado {
         height: auto;
-
-        .text-basic {
-            h1 {
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-        }
     }
 
     .meladoComBorda {
@@ -332,13 +299,9 @@ p {
         list-style-type: none;
 
         li {
-            font-size: 14px;
             padding: 8px 0;
         }
 
-        p {
-            font-size: 16px;
-        }
     }
 }
 
@@ -357,16 +320,6 @@ p {
             flex-direction: column;
             align-items: center;
             padding: 10px;
-
-            .text-basic {
-                h1 {
-                    font-size: 22px;
-                }
-
-                p {
-                    font-size: 14px;
-                }
-            }
         }
 
         .servicos-nav {
@@ -409,12 +362,7 @@ p {
         list-style-type: none;
 
         li {
-            font-size: 12px;
             padding: 8px 0;
-        }
-
-        p {
-            font-size: 14px;
         }
     }
 }
@@ -427,11 +375,7 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* Centraliza verticalmente */
         flex-direction: column;
-        /* Garante que o h1 e o carousel fiquem na mesma coluna */
-        height: 100vh;
-        /* Garante que o contêiner tenha altura de tela cheia */
     }
 
     .carousel {
@@ -467,7 +411,6 @@ p {
     }
 
     h1 {
-        font-size: 3rem;
         text-align: center;
     }
 }
@@ -497,10 +440,6 @@ p {
         border-radius: 10px;
         opacity: 0.7;
         margin: 0 10px;
-    }
-
-    .card p {
-        font-size: 12px;
     }
 
     .card.prev-left,
@@ -534,10 +473,7 @@ p {
     }
 
     h1 {
-        font-size: 2rem;
-        color: var(--clr-white);
         text-align: center;
-        margin-bottom: 2em;
     }
 }
 
@@ -613,10 +549,6 @@ p {
         opacity: 0.7;
     }
 
-    .card p {
-        font-size: 10px;
-    }
-
     .card.prev-left,
     .card.next-right {
         display: block;
@@ -669,10 +601,6 @@ p {
         opacity: 0.7;
     }
 
-    .card p {
-        font-size: 8px;
-    }
-
     .card.left {
         opacity: 0;
     }
@@ -696,16 +624,6 @@ p {
     #faleConosco {
         height: auto;
 
-        .contatoTitle {
-            h1 {
-                font-size: 22px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-        }
-
         .containerFaleConosco {
             flex-direction: column;
 
@@ -717,7 +635,6 @@ p {
 
             input,
             textarea {
-                font-size: 20px !important;
                 padding: 10px !important;
             }
         }
@@ -729,12 +646,7 @@ p {
                 justify-content: center !important;
             }
 
-            h6 {
-                font-size: 24px !important;
-            }
-
             p {
-                font-size: 20px !important;
                 padding: 5px !important;
             }
         }
@@ -751,16 +663,6 @@ p {
     #faleConosco {
         height: auto;
 
-        .contatoTitle {
-            h1 {
-                font-size: 22px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-        }
-
         .containerFaleConosco {
             flex-direction: column;
 
@@ -772,7 +674,6 @@ p {
 
             input,
             textarea {
-                font-size: 20px !important;
                 padding: 10px !important;
             }
         }
@@ -783,14 +684,6 @@ p {
 
             .telefones {
                 display: block !important;
-            }
-
-            h6 {
-                font-size: 24px !important;
-            }
-
-            p {
-                font-size: 20px !important;
             }
         }
     }
@@ -806,16 +699,6 @@ p {
     #faleConosco {
         height: auto;
 
-        .contatoTitle {
-            h1 {
-                font-size: 22px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-        }
-
         .containerFaleConosco {
             flex-direction: column;
 
@@ -827,7 +710,6 @@ p {
 
             input,
             textarea {
-                font-size: 20px !important;
                 padding: 10px !important;
             }
         }
@@ -837,14 +719,6 @@ p {
 
             .telefones {
                 display: block !important;
-            }
-
-            h6 {
-                font-size: 24px !important;
-            }
-
-            p {
-                font-size: 20px !important;
             }
         }
     }
@@ -866,19 +740,8 @@ p {
     #faleConosco {
         height: auto;
 
-        .contatoTitle {
-            h1 {
-                font-size: 22px !important;
-            }
-
-            p {
-                font-size: 16px !important;
-            }
-        }
-
         .containerFaleConosco {
             flex-direction: column;
-
             align-items: center;
             gap: 10px;
         }
@@ -888,7 +751,6 @@ p {
 
             input,
             textarea {
-                font-size: 16px !important;
                 padding: 10px !important;
             }
         }
@@ -898,14 +760,6 @@ p {
 
             .telefones {
                 display: block !important;
-            }
-
-            h6 {
-                font-size: 24px !important;
-            }
-
-            p {
-                font-size: 18px !important;
             }
 
             iframe {

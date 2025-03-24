@@ -1,3 +1,8 @@
+//logo home
+document.getElementById('imagem-home').addEventListener('click', function () {
+    window.location.href = 'index.html'; // Redireciona para a página inicial
+});
+
 function menuOnClick() {
     document.getElementById("menuBar").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change");
