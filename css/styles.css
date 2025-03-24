@@ -229,7 +229,6 @@ header {
     width: 100%;
     background-color: var(--clr-black);
     border-radius: 10px;
-    position: fixed;
     z-index: 99;
 
     & .menu {
@@ -238,7 +237,7 @@ header {
       justify-content: space-around;
       align-items: center;
       position: relative;
-      background-color: red;
+      background-color: var(--clr-black);
 
 
       .logoPrincipal {
@@ -319,7 +318,6 @@ header {
 
 #menuBar {
   width: 45px;
-  height: 40px;
   margin: 30px 20px 20px 0;
   cursor: pointer;
   text-align: right;
@@ -413,7 +411,7 @@ header {
     text-align: center;
 
     & img {
-      width: 40%;
+      width: 60%;
     }
 
     & li {

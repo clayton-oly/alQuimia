@@ -30,16 +30,22 @@
 
     .banner {
         padding: 30px;
-    }
 
-    h1 {
-        transition: all 0.3s;
-    }
+        .bannerTopo {
+            li {
+                padding-top: 10px !important;
 
-    p {
-        transition: all 0.3s;
-        margin: 5px;
-        padding: 0 2em;
+                h1 {
+                    transition: all 0.3s;
+                }
+
+                p {
+                    transition: all 0.3s;
+
+                    margin: 0 !important;
+                }
+            }
+        }
     }
 
     .logoSandwich {
@@ -55,6 +61,22 @@
 
     .banner {
         padding: 20px;
+
+        .bannerTopo {
+            li {
+                padding-top: 10px !important;
+
+                h1 {
+                    transition: all 0.3s;
+                }
+
+                p {
+                    transition: all 0.3s;
+
+                    margin: 0 !important;
+                }
+            }
+        }
     }
 
     .logoSandwich {
@@ -63,14 +85,77 @@
 
 }
 
-@media (max-width: 320px) {
-    .logoSandwich {
-        width: 150px !important;
-        margin-left: 20px;
+@media (max-width: 768px) {
+    .banner {
+        height: auto !important;
+        padding-top: 30px !important;
+
+        .bannerTopo {
+            li {
+                padding-top: 10px;
+
+                h1 {
+                    text-align: center;
+                }
+
+                p {
+
+                    margin: 0 !important;
+                }
+            }
+        }
+
     }
 
-    #home {
-        height: 230px !important;
+    .logoSandwich {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 468px) {
+    .banner {
+        height: auto !important;
+
+        .bannerTopo {
+            li {
+                h1 {
+                    text-align: center;
+                }
+
+                p {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+    }
+
+    .logoSandwich {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner {
+        height: auto !important;
+        display: block !important;
+
+        .bannerTopo {
+            li {
+                h1 {
+                    text-align: center;
+                }
+
+                p {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+    }
+
+    .logoSandwich {
+        margin-left: 20px;
     }
 }
 
@@ -497,7 +582,6 @@
 
     .card {
         width: 220px;
-        height: 300px;
         transform: translateX(0);
         background: var(--clr-gradient2);
         border-radius: 10px;
