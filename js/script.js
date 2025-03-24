@@ -52,9 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-item');
     const tabContent = document.querySelectorAll('.tab-content');
@@ -74,5 +71,44 @@ document.addEventListener('DOMContentLoaded', () => {
             const tabId = tab.getAttribute('data-tab');
             document.getElementById(tabId).classList.add('active');
         });
+    });
+});
+
+// Seleciona todos os botões de abas "servicos"
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.servicos-tab');
+    const tabContents = document.querySelectorAll('.servicos-item');
+    const servicosNav = document.querySelector('.servicos-nav');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', (event) => {
+            // Impede a propagação do clique para o document
+            event.stopPropagation();
+
+            // Verifica se a aba já está ativa
+            const isActive = tab.classList.contains('active');
+
+            // Remover a classe 'active' de todos os botões de tab
+            tabs.forEach(t => t.classList.remove('active'));
+
+            // Remover a classe 'active' de todos os conteúdos das abas
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Se a aba não estava ativa, adiciona 'active' ao botão clicado e ao conteúdo
+            if (!isActive) {
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            }
+        });
+    });
+
+    // Fechar os conteúdos quando clicar fora da área de serviços
+    document.addEventListener('click', (event) => {
+        if (!servicosNav.contains(event.target)) {
+            tabContents.forEach(content => content.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+        }
     });
 });
